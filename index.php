@@ -7,7 +7,7 @@ if (empty($_GET['t'])) {
 } elseif (empty($_GET['b'])) {
 	header("location: batt.php");
 } else {
-	echo '"Fuck Off Randy" - Bubbles, Trailer Park Boys';
+	echo 'TEAM ' . $_GET['t'];
 }
 
 ?>
