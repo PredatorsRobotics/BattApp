@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 <head>
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -11,9 +12,16 @@
 <div class="container">
 <ul class="nav nav-pills nav-justified">
   <li class="active"><a href="#">Team</a></li>
-  <li><a href="#">Member</a></li>
-  <li><a href="#">Battery</a></li>
+  <li class="disabled"><a href="#">Member</a></li>
+  <li class="disabled"><a href="#">Battery</a></li>
 </ul>
-<div>
+<br>
+<form method="get" action="index.php">
+<div class="input-group">
+  <input type="text" name="t" class="form-control" placeholder="Team ID" autofocus>
+  <input type="submit">
+</div>
+</form>
+</div>
 </body>
 </html>
