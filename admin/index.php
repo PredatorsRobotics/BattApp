@@ -131,7 +131,7 @@ body {
 </style>
 </head>
 <body>
-
+<div class="visible-xs visible-sm"></div>
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -145,10 +145,7 @@ body {
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="../">Back</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -168,9 +165,9 @@ body {
             <li><a href="#">Export</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="">Team</a></li>
-            <li><a href="">Members</a></li>
-            <li><a href="">Batterys</a></li>
+            <li><a href="team.php">Team</a></li>
+            <li><a href="memb.php">Members</a></li>
+            <li><a href="batt.php">Batterys</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

@@ -39,10 +39,6 @@ if (!empty($_GET['b'])) {
  */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
-body {
-  padding-top: 50px;
-}
-
 
 /*
  * Global add-ons
@@ -134,7 +130,7 @@ body {
 </head>
 <body>
 
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="navbar navbar-inverse navbar-fixed-top visible-md visible-lg" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -148,9 +144,7 @@ body {
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="admin">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="sess.php">New</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -158,7 +152,7 @@ body {
         </div>
       </div>
     </div>
-
+<div class="visible-md visible-lg" style="height: 50px;">&nbsp</div>
 <div class="container">
 <ul class="nav nav-pills nav-justified">
   <li><a href="team.php">Team <span class="label label-default"><?php echo $_SESSION['TID']; ?></span></a></li>
