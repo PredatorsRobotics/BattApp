@@ -11,9 +11,9 @@
 <body>
 <div class="container">
 <ul class="nav nav-pills nav-justified">
-  <li class="active"><a href="#">Team</a></li>
-  <li class="disabled"><a href="#">Member</a></li>
-  <li class="disabled"><a href="#">Battery</a></li>
+  <li class="active"><a href="#">Team <span class="label label-default"><?php echo $_SESSION['TID']; ?></span></a></li>
+  <li class="disabled"><a href="#">Member <span class="label label-default"><?php echo $_SESSION['MID']; ?></span></a></li>
+  <li class="disabled"><a href="#">Battery <span class="label label-default"><?php echo $_SESSION['BID']; ?></span></a></li>
 </ul>
 <br>
 <form method="get" action="index.php">

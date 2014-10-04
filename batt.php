@@ -9,19 +9,22 @@
 <title></title>
 </head>
 <body>
+
+
+
+
+
 <div class="container">
 <ul class="nav nav-pills nav-justified">
   <li><a href="team.php">Team <span class="label label-default"><?php echo $_SESSION['TID']; ?></span></a></li>
   <li><a href="memb.php">Member <span class="label label-default"><?php echo $_SESSION['MID']; ?></span></a></li>
-  <li class="active"><a href="#">Battery</a></li>
+  <li class="active"><a href="#">Battery <span class="label label-default"><?php echo $_SESSION['BID']; ?></span></a></li>
 </ul>
 <br>
 <form method="get" action="index.php">
 <div class="input-group">
   <input type="text" name="b" class="form-control" placeholder="Battery ID" autofocus>
-  <input type="hidden" name="t" value="<?php echo $_SESSION['TID']; ?>">
-  <input type="hidden" name="m" value="<?php echo $_SESSION['MID']; ?>">
-  <input type="submit">
+  <input type="submit" class="btn btn-default">
 </div>
 </form>
 </div>
