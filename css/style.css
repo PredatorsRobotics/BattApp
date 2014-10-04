@@ -3,3 +3,7 @@
 .container {
 	margin-top: 10px;
 }
+
+.input-group {
+	width: 100%;
+}
