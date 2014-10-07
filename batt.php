@@ -117,18 +117,19 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
+		    <?php
+			if($_SESSION['MID'] == Eric) { ?>
             <li><a href="admin">Dashboard</a></li>
+			<?php
+			} ?>
             <li><a href="sess.php">New</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
     </div>
 <div class="visible-md visible-lg" style="height: 50px;">&nbsp</div>
 <div class="container">
-<ul class="nav nav-pills nav-justified">
+<ul class="nav nav-pills nav-justified hidden-xs">
   <li><a href="team.php">Team <span class="label label-default"><?php echo $_SESSION['TID']; ?></span></a></li>
   <li><a href="memb.php">Member <span class="label label-default"><?php echo $_SESSION['MID']; ?></span></a></li>
   <li class="active"><a href="#">Battery <span class="label label-default"><?php echo $_SESSION['BID']; ?></span></a></li>
@@ -136,7 +137,8 @@
 <br>
 <form method="get" action="index.php">
 <div class="input-group">
-  <input type="text" name="b" class="form-control" style="width: 100%;" placeholder="Battery ID" autofocus><br><br>
+  <a class="btn btn-default hidden-md hidden-lg" style="width: 100%;" href="sess.php">New</a>
+<input type="text" name="b" class="form-control" style="width: 100%;" placeholder="Battery ID" autofocus><br><br>
   <input type="submit" class="btn btn-default" style="width: 100%;">
 </div>
 </form>

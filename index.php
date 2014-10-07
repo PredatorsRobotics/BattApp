@@ -143,12 +143,13 @@ if (!empty($_GET['b'])) {
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
+		    <?php
+			if($_SESSION['MID'] == 5180) { ?>
             <li><a href="admin">Dashboard</a></li>
+			<?php
+			} ?>
             <li><a href="sess.php">New</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
     </div>

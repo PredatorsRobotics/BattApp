@@ -117,21 +117,17 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="admin/">Dashboard</a></li>
 			<li><a href="sess.php">New</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
     </div>
 <div class="visible-md visible-lg" style="height: 50px;">&nbsp</div>
 <div class="container">
-<ul class="nav nav-pills nav-justified">
+<ul class="nav nav-pills nav-justified hidden-xs">
   <li><a href="team.php">Team <span class="label label-default"><?php echo $_SESSION['TID']; ?></span></a></li>
-  <li class="active"><a href="#">Member <span class="label label-default"><?php echo $_SESSION['MID']; ?></span></a></li>
-  <li class="disabled"><a href="#">Battery <span class="label label-default"><?php echo $_SESSION['BID']; ?></span></a></li>
+  <li class="active"><a href="memb.php">Member <span class="label label-default"><?php echo $_SESSION['MID']; ?></span></a></li>
+  <li><a href="batt.php">Battery <span class="label label-default"><?php echo $_SESSION['BID']; ?></span></a></li>
 </ul>
 <br>
 <form method="get" action="index.php">

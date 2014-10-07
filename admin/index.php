@@ -1,27 +1,17 @@
-<?php
-mysqli_connect('localhost','battery','battery','battery');
-session_start();
+<?php session_start();
 
-if (!empty($_GET['t'])) {
-	$_SESSION['TID']=$_GET['t'];
-} elseif (empty($_SESSION['TID'])) {
-	header('Location: team.php');
-	exit;
+$con=mysqli_connect("localhost","battery","robot","battery");
+
+if(empty($_SESSION['MID'])) {
+header ('Location: ../index.php');
+stop;
 }
 
-if (!empty($_GET['m'])) {
-	$_SESSION['MID']=$_GET['m'];
-} elseif (empty($_SESSION['MID'])) {
-	header('Location: memb.php');
-	exit;
+if($_SESSION['MID'] !== Eric) {
+header ('Location: ../index.php');
+stop;
 }
 
-if (!empty($_GET['b'])) {
-	$_SESSION['BID']=$_GET['b'];
-} elseif (empty($_SESSION['BID'])) {
-	header('Location: batt.php');
-	exit;
-}
 ?>
 <html>
 <head>
@@ -147,9 +137,6 @@ body {
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../">Back</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
     </div>
@@ -160,9 +147,6 @@ body {
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Overview</a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li><a href="team.php">Team</a></li>
@@ -172,44 +156,10 @@ body {
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
-
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-          </div>
-
           <h2 class="sub-header">Section title</h2>
         </div>
       </div>
     </div>
 
-
-
-<div class="container">
-<ul class="nav nav-pills nav-justified">
-  <li><a href="team.php">Team <span class="label label-default"><?php echo $_SESSION['TID']; ?></span></a></li>
-  <li><a href="memb.php">Member <span class="label label-default"><?php echo $_SESSION['MID']; ?></span></a></li>
-  <li><a href="batt.php">Battery <span class="label label-default"><?php echo $_SESSION['BID']; ?></span></a></li>
-</ul>
-
-</div>
 </body>
 </html>
