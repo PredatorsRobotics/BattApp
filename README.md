@@ -15,7 +15,7 @@ secure login and email reminders and succinct summaries.
 
 (All information is current as of version 1.0)
 
-View Live [Here](http://ericvillnow.com/battapp)
+View Live [Here](http://battapp-villnoweric.c9.io)
 
 #### Contact Information ####
 
@@ -23,3 +23,5 @@ View Live [Here](http://ericvillnow.com/battapp)
 |:----------:|:--------------:|:--------------------------------------------------------:|:---------------------------------------------:|
 | Developer  |  Eric Villnow  |   [eric@ericvillnow.com](mailto:eric@ericvillnow.com)    |   [ericvillnow.com](http://ericvillnow.com)   |
 | Maintainer | Chandler Swift | [chandler@chandlerswift.com](chandler@chandlerswift.com) | [chandlerswift.com](http://chandlerswift.com) |
+
+Thanks to [Cloud9](http://c9.io) For hosting and developer tools.
